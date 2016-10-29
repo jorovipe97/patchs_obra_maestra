@@ -19,10 +19,10 @@
 #X obj 649 848 *~;
 #X obj 650 880 hip~ 5;
 #X obj 649 494 *;
-#X obj 418 541 hsl 128 15 -2 2 0 0 empty empty empty -2 -6 0 8 -262144
+#X obj 445 542 hsl 128 15 -2 2 0 0 empty empty empty -2 -6 0 8 -262144
 -1 -1 9525 1;
-#X text 405 558 -2;
-#X text 543 561 2;
+#X text 433 558 -2;
+#X text 565 558 2;
 #X obj 266 218 hsl 200 15 0 1 0 0 empty empty empty -2 -6 0 8 -262144
 -1 -1 19900 1;
 #X obj 265 184 hsl 200 15 0 1 0 0 empty empty empty -2 -6 0 8 -262144
@@ -52,7 +52,7 @@
 #X obj 686 394 t b f;
 #X obj 650 585 *~;
 #X text 838 548 only if there is an;
-#X text 414 517 playback speed;
+#X text 441 518 playback speed;
 #X obj 851 8 loadbang;
 #X obj 847 37 send defaultOptions;
 #X obj 1018 33 receive defaultOptions;
@@ -85,12 +85,16 @@
 #X obj 215 223 vsl 25 200 0 1 0 0 empty empty Volumen 0 -9 0 10 -262144
 -1 -1 19900 1;
 #X obj 651 912 outlet~;
-#X obj 578 53 inlet;
+#X obj 110 57 inlet;
 #X text 160 137 O pasa el archivo como mensaje por el inlet;
-#X obj 651 52 inlet;
+#X obj 183 56 inlet;
 #X text 103 534 Inlet description;
-#X obj 717 52 inlet;
-#X text 105 555 File | Volume | Speed;
+#X obj 249 56 inlet;
+#X text 105 555 File | Volume | Speed | -x | play | pause | 2x;
+#X obj 311 56 inlet;
+#X obj 367 54 inlet;
+#X obj 415 54 inlet;
+#X obj 468 50 inlet;
 #X connect 1 0 65 0;
 #X connect 2 0 1 0;
 #X connect 3 0 4 0;
@@ -152,4 +156,8 @@
 #X connect 72 0 65 0;
 #X connect 74 0 70 0;
 #X connect 76 0 15 0;
+#X connect 78 0 59 0;
+#X connect 79 0 55 0;
+#X connect 80 0 56 0;
+#X connect 81 0 57 0;
 #X coords 0 -1 1 1 480 480 1 100 100;
