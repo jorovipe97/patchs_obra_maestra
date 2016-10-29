@@ -1,0 +1,75 @@
+#N canvas -9 -9 1920 976 10;
+#X obj 475 -8750 hidin;
+#X obj 509 -8714 print DEVICES;
+#X msg 472 -8793 bang;
+#X msg 398 -8791 open 5;
+#X obj 536 -8796 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X msg 567 -8793 close;
+#X obj 364 -8714 route 1 2 3 4 5 14 15;
+#X obj 329 -8641 print;
+#X text 218 -8672 y_axis_left;
+#X obj 411 -8661 print;
+#X text 336 -8511 x_axis_left;
+#X obj 310 -8555 vsl 15 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 297 -8670 expr ($f1-255)*-1;
+#X obj 256 -8494 hsl 128 15 0 255 0 0 empty empty empty -2 -8 0 10
+-262144 -1 -1 0 1;
+#X text 486 -8665 y_axis_left;
+#X text 576 -8508 x_axis_left;
+#X obj 550 -8552 vsl 15 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 563 -8665 expr ($f1-255)*-1;
+#X obj 496 -8491 hsl 128 15 0 255 0 0 empty empty empty -2 -8 0 10
+-262144 -1 -1 0 1;
+#X obj 91 -8495 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 185 -8596 route 15;
+#X obj 93 -8595 route 6 0 2 4;
+#X obj 126 -8523 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 155 -8493 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 124 -8462 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X msg 170 -8565 0;
+#X obj 697 -8597 Sampleando;
+#X obj 773 -8712 symbol;
+#X obj 770 -8675 makefilename %s/battery-clock.wav;
+#X msg 789 -8743 audios/ambientales;
+#X msg 698 -8626 ./audios/ambientales/ambiance-food-market.wav;
+#X msg 705 -8656 interstellarWAV.wav;
+#X obj 1119 -8208 dac~;
+#X obj 1123 -8715 sampler3;
+#X connect 0 0 6 0;
+#X connect 0 1 1 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 0;
+#X connect 5 0 0 0;
+#X connect 6 0 7 0;
+#X connect 6 0 12 0;
+#X connect 6 1 13 0;
+#X connect 6 2 17 0;
+#X connect 6 3 18 0;
+#X connect 6 4 20 0;
+#X connect 6 4 21 0;
+#X connect 12 0 11 0;
+#X connect 17 0 16 0;
+#X connect 20 0 25 0;
+#X connect 21 0 19 0;
+#X connect 21 1 22 0;
+#X connect 21 2 23 0;
+#X connect 21 3 24 0;
+#X connect 25 0 22 0;
+#X connect 25 0 23 0;
+#X connect 25 0 24 0;
+#X connect 25 0 19 0;
+#X connect 27 0 28 0;
+#X connect 28 0 26 0;
+#X connect 29 0 27 0;
+#X connect 30 0 26 0;
+#X connect 31 0 26 0;
+#X connect 33 0 32 0;
+#X connect 33 0 32 1;

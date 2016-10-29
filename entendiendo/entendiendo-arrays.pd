@@ -1,0 +1,35 @@
+#N canvas 538 50 819 465 10;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array array1 1.38332e+007 float 2;
+#X coords 0 1 1.38332e+007 -1 200 140 1 0 0;
+#X restore 283 -8398 graph;
+#X obj 517 -8295 tabwrite array1;
+#X msg 514 -8332 0.5;
+#X obj 512 -8369 expr $f1/100;
+#X floatatom 601 -8393 5 0 0 0 - - -;
+#X msg 100 -8344 \; jose print;
+#X msg 143 -8388 \; jose rename array1;
+#X msg 14 -8388 \; array1 rename jose;
+#X msg 152 -8243 \; array1 resize 100;
+#X msg 95 -8192 \; array1 normalize;
+#X obj 531 -8152 tabwrite~ array1;
+#X obj 611 -8193 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 547 -8193 osc~ 4;
+#X obj 318 -8146 soundfiler;
+#X floatatom 318 -8112 5 0 0 0 Numero_de_samples_del_archivo_cargado
+- -;
+#X msg 317 -8181 read InterstellarWAV.wav array1;
+#X msg 12 -8243 \; array1 resize 1e+006;
+#X obj 393 -7999 dac~;
+#X obj 387 -8071 tabplay~ array1;
+#X connect 2 0 1 0;
+#X connect 3 0 1 0;
+#X connect 4 0 1 1;
+#X connect 4 0 3 0;
+#X connect 11 0 10 0;
+#X connect 12 0 10 0;
+#X connect 13 0 14 0;
+#X connect 15 0 13 0;
+#X connect 18 0 17 0;
+#X connect 18 0 17 1;
