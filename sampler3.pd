@@ -1,4 +1,4 @@
-#N canvas 192 16 1322 920 12;
+#N canvas 166 15 1322 920 12;
 #N canvas 0 0 450 300 (subpatch) 0;
 #X array \$0-array1 1.38332e+007 float 2;
 #X coords 0 1 1.38332e+007 -1 200 140 1 0 0;
@@ -87,6 +87,10 @@
 #X obj 651 912 outlet~;
 #X obj 578 53 inlet;
 #X text 160 137 O pasa el archivo como mensaje por el inlet;
+#X obj 651 52 inlet;
+#X text 103 534 Inlet description;
+#X obj 717 52 inlet;
+#X text 105 555 File | Volume | Speed;
 #X connect 1 0 65 0;
 #X connect 2 0 1 0;
 #X connect 3 0 4 0;
@@ -146,4 +150,6 @@
 #X connect 69 0 18 0;
 #X connect 70 0 11 0;
 #X connect 72 0 65 0;
+#X connect 74 0 70 0;
+#X connect 76 0 15 0;
 #X coords 0 -1 1 1 480 480 1 100 100;
